@@ -1,0 +1,103 @@
+
+/* --------- ( Estilos globales ) */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+/* --------- ( Contenedor de toda la página ) */
+
+.container {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#F6E8B1
+    
+}
+
+/* --------- ( Contenedor del login ) */
+
+.form_container {
+    margin: 10px;
+    padding: 10px 15px 15px 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #F5F5DC;
+    border: 5px solid #dff0fe;
+}
+
+h1 {
+    text-align: center; 
+    margin-bottom: 20px;
+    font-family: 'Courier New';
+    font-size: 25px;
+}
+
+/* --------- ( Contenedor de los inputs, estilos de los inputs y textos de los inputs ) */
+
+.input_container {
+    margin: 5px;
+    padding: 5px;
+}
+
+.input {
+    width: 270px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.input_text {
+    margin: 0px 0px 0px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: 600;
+}
+
+/* --------- ( Contenedor de los botones, estilos de los botones y estilos de la etiqueta "<a>" ) */
+
+.button_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 260px;
+    height: 40px;
+    border-radius: 7px;
+    color: #ffffff;
+    background-color: #eaf1f9;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.button_container, .button {
+    margin: 5px;
+}
+
+a {
+    width: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* --------- ( Contenedor del mensaje ) */
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------- */

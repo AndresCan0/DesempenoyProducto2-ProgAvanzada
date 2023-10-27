@@ -1,0 +1,56 @@
+
+html(lang="es")
+
+  head
+
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title Rentar vehiculo
+    
+    link(rel="stylesheet", href="css/form_style.css")
+
+  body
+    
+    .container
+
+        form(action="/Rent", method="POST")
+
+            .form_container
+                h1 RENTA UN AUTO
+                .input_container
+
+                    label.input_text(for="rentNumber") Numero de la renta
+                    input.input(type="number", id="rentNumber", name="rentNumber", required, value=rentNumber)
+                    
+                    label.input_text(for="user") Nombre del usuario
+                    select.input(type="text", id="user", name="user", required)
+                        each user in users
+                          option(value=user.user) #{user.user}
+
+                    label.input_text(for="plateNumber") Placa del vehiculo
+                    select.input(type="text", id="plateNumber", name="plateNumber", required)
+                      each car in cars
+                        option(value=car.plateNumber) #{car.plateNumber}
+                    
+                    label.input_text(for="rentDate") Fecha de la renta
+                    input.input(type="date", id="rentDate", name="rentDate", required, value=rentDate)
+
+                .button_container
+
+                    button.button(type="submit", style="background-color: dff0fe; color: black") Guardar
+                    a.button(href="/Menu") Volver
+
+            .message        
+
+              if error == null
+
+                p 
+
+              else if error == false 
+              
+                p(style={color: 'black', 'font-weight': 'bold', 'font-size': '18px',  'font-family': 'Lucida Console'}) #{message}
+
+              else
+              
+                p(style={color: 'black', 'font-weight': 'bold', 'font-size': '18px',  'font-family': 'Lucida Console'}) #{message}

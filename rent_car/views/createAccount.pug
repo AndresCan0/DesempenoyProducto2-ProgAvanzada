@@ -1,0 +1,49 @@
+
+html(lang="es")
+
+  head
+
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title Crear cuenta
+    
+    link(rel="stylesheet", href="css/form_style.css")
+
+  body
+    
+    .container
+
+        form(action="/createAccount", method="POST")
+
+            .form_container
+              h1 INICIO DE SESION
+                .input_container
+
+                    label.input_text(for="user") Usuario
+                    input.input(type="text", id="user", name="user", required)
+                    
+                    label.input_text(for="name") Nombre
+                    input.input(type="text", id="name", name="name", required)
+
+                    label.input_text(for="password") Contraseña
+                    input.input(type="password", id="password", name="password", required)
+
+                .button_container
+
+                    button.button(type="submit", style="background-color: #eaf1f9; color: black;") Guardar
+                    a.button(href="/singIn") Volver
+
+            .message        
+
+              if error == null
+
+                p 
+
+              else if error == false 
+              
+                p(style={color: 'black', 'font-weight': 'bold', 'font-size': '18px',  'font-family': 'Lucida Console'}) #{message}
+
+              else
+              
+                p(style={color: 'black', 'font-weight': 'bold', 'font-size': '18px',  'font-family': 'Lucida Console'}) #{message}

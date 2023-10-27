@@ -1,0 +1,47 @@
+
+html(lang="es")
+
+  head
+
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title Lista automoviles
+    
+    link(rel="stylesheet", href="/css/list_style.css")
+
+  body
+
+    .container
+      .button_container
+
+          a.button(href="/Menu") Volver    
+      .box
+        
+
+        .scrollview_container
+
+          if cars && cars.length > 0
+        
+            each car in cars 
+
+              .list_container
+
+                p.list_text(style={color: 'black', 'font-weight': 'bold'})| Placa: #{car.plateNumber}
+                p.list_text(style={color: 'black', 'font-weight': 'bold'})| Marca: #{car.brand}
+
+                if car.state === "disponible"
+
+                  p.list_text(style={color: 'orange', 'font-weight': 'bold'})| Estado: #{car.state}
+
+                else if car.state === "no disponible"
+
+                  p.list_text(style={color: 'orange', 'font-weight': 'bold'})| Estado: #{car.state}
+
+                else
+
+                  p.list_text Estado: #{car.state}
+
+          else
+
+            p.list_text No hay automoviles registrados
